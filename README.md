@@ -32,6 +32,14 @@ bash <(curl -L https://t.ly/tHxh)
   
 ### Amal-dx
 
+## 📢Introduce myself
+
+- 🙂 I'm  Amal
+- 🚩 I'm a beginner in this field
+- 📍 From pathripala,palakkad,Kerala,🇮🇳
+- 🏫 Students
+
+
 
 ### ⚠️ Warning! 
 ```
