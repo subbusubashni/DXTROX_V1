@@ -229,14 +229,14 @@
         },
         "updater": {
             "UPDATER_DESC": "Checks the update.",
-            "UPDATE": "*Amalser bot is completely up-to-date!*",
-            "NEW_UPDATE": "*Amalser Update und for updating command*\n\n*.update now*\n\n*please ask supporting group before updating*\n\nhttps://chat.whatsapp.com/Lvtl7GqERfP19Na6M2wndX\n\nChanges:\n```",
+            "UPDATE": "*DXTROX bot is completely up-to-date!*",
+            "NEW_UPDATE": "*DXTROX Update und for updating command*\n\n*.update now*\n\n*please ask supporting group before updating*\n\nhttps://chat.whatsapp.com/JyE9edUo3JUBa38nVTrfHc\n\nChanges:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
             "UPDATING": "```Updating..please wait bro 5mins😊```",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
             "UPDATED": "*Updated 🧸✅  sanam set👍*",
             "UPDATED_LOCAL": "*✅ Successfully Updated 😍😍😍!*",
-            "AFTER_UPDATE": "*💘 Amalser Restarting  please wait 5mints*"
+            "AFTER_UPDATE": "*💖DXTROX Restarting  please wait 5mints*"
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
