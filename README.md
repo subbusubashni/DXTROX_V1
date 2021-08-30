@@ -2,6 +2,13 @@
 
 ## Amal-dx
 
+## 📢Introduce myself
+
+- 🙂 I'm  Amal
+- 🚩 I'm a beginner in this field
+- 📍 From pathripala,palakkad,Kerala,🇮🇳
+- 🏫 Students
+
 <div align="center">
   <img src=http://telegra.ph/file/68809ff84d7cd4447a76e.jpg>
 ## 📢 Guide
@@ -31,14 +38,6 @@ bash <(curl -L https://t.ly/tHxh)
 ``` 
   
 ### Amal-dx
-
-## 📢Introduce myself
-
-- 🙂 I'm  Amal
-- 🚩 I'm a beginner in this field
-- 📍 From pathripala,palakkad,Kerala,🇮🇳
-- 🏫 Students
-
 
 
 ### ⚠️ Warning! 
