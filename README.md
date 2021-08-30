@@ -4,7 +4,6 @@
 
 <div align="center">
   <img src=http://telegra.ph/file/68809ff84d7cd4447a76e.jpg>
-
 ## 📢 Guide
 Click WA logo to Join Support Group 👇
     <br>
@@ -46,9 +45,9 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
   <div align="center">
     
   [![DXTROX](<img src=http://telegra.ph/file/68809ff84d7cd4447a76e.jpg>
- https://github.com/Amalser_v1 |  
+ https://github.com/amal-dx/DXTROX_V1 |  
 ----|
-[Its_me_Amal](https://github.com/Amalser_v1)  |
+[Amal-dx](https://github.com/amal-dx/DXTROX_V1)  |
 Base, Bug Fixes, Modules | 
   
     
