@@ -1,9 +1,9 @@
 <div align="center">
 
-## Its_me_Amal 
+## Amal-dx
 
 <div align="center">
-  <img src=https://www.linkpicture.com/q/IMG-20210819-WA1189.jpg>
+  <img src=http://telegra.ph/file/68809ff84d7cd4447a76e.jpg>
 
 ## 📢 Guide
 Click WA logo to Join Support Group 👇
@@ -31,7 +31,7 @@ If Repl.it not working Try Termux for Qr scanning.Just Copy the Link Below in Te
 bash <(curl -L https://t.ly/tHxh)
 ``` 
   
-### Its_me_Amal
+### Amal-dx
 
 
 ### ⚠️ Warning! 
