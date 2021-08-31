@@ -56,14 +56,16 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 ```
 
 ## Developers
-  <div align="center">
+<div align="center">
     
-  [![DXTROX](<img src=http://telegra.ph/file/68809ff84d7cd4447a76e.jpg>
- https://github.com/amal-dx/DXTROX_V1 |  
--------|-------|
-[Amal-dx](https://github.com/amal-dx/DXTROX_V1)  |
-Base, Bug Fixes, Modules | [TERROR-BOY](https://github.com/terror-boy/WhiteDevil)  
-Base, Bug Fixes, Modules |
+  [![DXTROX](https://github.com/amal-dx.png?size=200)](https://github.com/amal-dx) | [![TERROR-BOY](https://github.com/terror-boy.png?size=200)](https://github.com/terror-boy)  
+----|----
+[DXTROX](https://github.com/amal-dx)  | [TERROR-BOY](https://github.com/terror-boy)  
+Base, Bug Fixes, Modules | Base, Bug Fixes, Modules 
+  </div>
+
+
+  
   
     
 
