@@ -25,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
         }
 
         if (Config.PLK == 'default') {
-            await message.client.sendMessage(message.jid,'Amalser Bot created by *Amal*' , MessageType.text);
+            await message.client.sendMessage(message.jid,'DXTROX Bot created by *Amal-dx*' , MessageType.text);
         }
         else {
             await message.client.sendMessage(message.jid,Config.PLK + '\n\n---------------------', MessageType.text);
