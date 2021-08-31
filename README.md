@@ -14,12 +14,16 @@
 
 <div align="center">
   <img src=http://telegra.ph/file/68809ff84d7cd4447a76e.jpg>
+
+
 ## 📢 Guide
-Click WA logo to Join Support Group 👇
+Click WA logo to Join Support Group 👇👇
     <br>
 <br>
-  [![join] (https://chat.whatsapp.com/JyE9edUo3JUBa38nVTrfHc)
+  [![join](https://github.com/Alien-alfa/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com/JyE9edUo3JUBa38nVTrfHc)
   <div align="center">
+    <br>
+<br>
        
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=farhan-dqz&repo=PublicBot&theme=nightowl)](https://github.com/farhan-dqz/PublicBot)
   </div>
@@ -56,9 +60,10 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
     
   [![DXTROX](<img src=http://telegra.ph/file/68809ff84d7cd4447a76e.jpg>
  https://github.com/amal-dx/DXTROX_V1 |  
-----|
+-------|-------|
 [Amal-dx](https://github.com/amal-dx/DXTROX_V1)  |
-Base, Bug Fixes, Modules | 
+Base, Bug Fixes, Modules | [TERROR-BOY](https://github.com/terror-boy/WhiteDevil)  
+Base, Bug Fixes, Modules |
   
     
 
