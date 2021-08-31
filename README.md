@@ -25,7 +25,7 @@ Click WA logo to Join Support Group 👇👇
     <br>
 <br>
        
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=farhan-dqz&repo=PublicBot&theme=nightowl)](https://github.com/farhan-dqz/PublicBot)
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=amal-dx&repo=DXTROX_V1&theme=nightowl)](https://github.com/amal-dx/DXTROX_V1)
   </div>
     
 ## Setup
