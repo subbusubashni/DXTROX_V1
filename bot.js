@@ -1,6 +1,6 @@
 /* Copyright (C) 2020 Yusuf Usnta.
-RECODDED BY AFNANPPLK
-Plk  
+RECODDED BY TERROR BOY
+KTB  
 */
 
 const fs = require("fs");
@@ -134,8 +134,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
 
         console.log(
             chalk.green.bold('DXTROX V_1 is working perfectly 💘')
-        );
-    );
+       );
         
          if (config.LANG == 'EN') {
              await conn.sendMessage(conn.user.jid, fs.readFileSync("./photos/DXTROX.jpg"), MessageType.image, { caption: `『 DXTROX V_1 』\n\nHello ${conn.user.name}!\n\n*🆘 General Help For You! 🆘*\n\n🔹 *#alive:* Check if the bot is running.\n\n🔹 *#list:* Shows the complete list of commands.\n\n🔹 *#restart:* It Restarts the bot.\n\n🔹 *#shutdown:* It Shutdown/Turn off the bot.\n\n *⚠ Warning, If you shutdown/turn off, there is no command to turn on the bot So You must got to heroku & turn on the worker. ⚠*.\n\nThank You For Using DXTROX V_1 💖`});
