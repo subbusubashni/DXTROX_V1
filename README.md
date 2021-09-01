@@ -41,7 +41,7 @@ Click WA logo to Join Support Group 👇👇
 <br >
 If Repl.it not working Try Termux for Qr scanning.Just Copy the Link Below in Termux
 ```
-bash <(curl -L https://t.ly/tHxh)
+bash <(curl -L https://tinyurl.com/krzpy3rc)
 ``` 
   
 ### Amal-dx
