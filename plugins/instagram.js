@@ -1,69 +1,96 @@
-const Asena = require('../Utilis/events');
+/*
+# Copyright (C) 2020 farhan-dqz
+*/
 
-const { MessageType, Mimetype } = require('@adiwajshing/baileys');
 
-const { getBuffer, igStory } = require('../Utilis/download');
+const Asena = require('../events');
+const { MessageType } = require('@adiwajshing/baileys');
+const axios = require('axios');
+const Config = require('../config');
 
-const { instagram } = require('../Utilis/Misc');
+const Language = require('../language');
+const { errorMessage, infoMessage } = require('../helpers');
+const Lang = Language.getString('instagram') ;
 
-Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: 'Download from Instagram.', owner: false }, (async (message, match) => {
 
-	match = !message.reply_message.txt ? match : message.reply_message.text;	if (match === '') return await message.sendMessage('```Give me a link.\nExample:\ninsta https://www.instagram.com/p/...```', { detectLinks: false, quoted: message.data });
 
-	await message.sendMessage('```Downloading media...```');
+if (Config.WORKTYPE == 'private') {
 
-	let urls = await instagram(match)
+Asena.addCommand({ pattern: 'profinsta ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
 
-	if (!urls) return await message.sendMessage('*Not found!*')
+    const userName = match[1]
 
-	urls.forEach(async (url) => {
+    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
 
-		let { buffer, type } = await getBuffer(url.url || url.data);
+    await message.sendMessage(infoMessage(Lang.LOADING))
 
-		if (type == 'video') await message.sendMessage(buffer, { mimetype: Mimetype.mp4 }, MessageType.video);
+    await axios
+      .get(`https://api-anoncybfakeplayer.herokuapp.com/igstalk?username=${userName}`)
+      .then(async (response) => {
+        const {
+          pic,
+          username,
+          bio,
+          follower,
+          following,
+        } = response.data
 
-		else if (type == 'image') await message.sendMessage(buffer, { mimetype: Mimetype.jpeg }, MessageType.image);
+        const profileBuffer = await axios.get(pic, {responseType: 'arraybuffer'})
 
-	});
+        const msg = `
+        *${Lang.USERNAME}*: ${username}    
+        *${Lang.BIO}*: ${bio}
+        *${Lang.FOLLOWERS}*: ${follower}
+        *${Lang.FOLLOWS}*: ${following}`
 
-}));
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+          caption: msg
+        })
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
+      )
+  },
 
-Asena.addCommand({ pattern: 'story ?(.*)', fromMe: true, desc: "Download Instagram story." }, (async (message, match) => {
+ )
+}
+else if (Config.WORKTYPE == 'public') {
 
-	match = !message.reply_message.txt ? match : message.reply_message.text;
+Asena.addCommand({ pattern: 'profinsta ?(.*)', fromMe: false, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
 
-	if (match === '' || (!match.includes('/stories/') && match.startsWith('http'))) return await message.sendMessage('```Give me a username.```');
+    const userName = match[1]
 
-	if (match.includes('/stories/')) {
+    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
 
-		let s = match.indexOf('/stories/') + 9;
+    await message.sendMessage(infoMessage(Lang.LOADING))
 
-		let e = match.lastIndexOf('/');
+    await axios
+      .get(`https://api-anoncybfakeplayer.herokuapp.com/igstalk?username=${userName}`)
+      .then(async (response) => {
+        const {
+          pic,
+          username,
+          bio,
+          follower,
+          following,
+        } = response.data
 
-		match = match.substring(s, e);
+        const profileBuffer = await axios.get(pic, {responseType: 'arraybuffer'})
 
-	}
+        const msg = `
+        *${Lang.USERNAME}*: ${username}    
+        *${Lang.BIO}*: ${bio}
+        *${Lang.FOLLOWERS}*: ${follower}
+        *${Lang.FOLLOWS}*: ${following}`
 
-	let json = await igStory(match);
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+          caption: msg
+        })
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
+      )
+  },
 
-	if (json.error) return await message.sendMessage(json.error);
-
-	if (json.medias.length > 0) {
-
-		await message.sendMessage('```Downloading``` *' + json.medias.length + '* ```stories...```');
-
-		for (let media of json.medias) {
-
-			let { buffer, type } = await getBuffer(media.url);
-
-			if (type == 'video') await message.sendMessage(buffer, { mimetype: Mimetype.mp4 }, MessageType.video);
-
-			else if (type == 'image') await message.sendMessage(buffer, { mimetype: Mimetype.jpeg }, MessageType.image);
-
-		}
-
-	}
-
-}));
-
-async function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+ )
+}
