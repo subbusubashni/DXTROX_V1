@@ -90,7 +90,49 @@ Asena.addCommand({ pattern: 'profinsta ?(.*)', fromMe: false, usage: Lang.USAGE,
       .catch(
         async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
       )
-  },
+  });
 
- )
-}
+}));
+
+Asena.addCommand({ pattern: 'story ?(.*)', fromMe: true, desc: "Download Instagram story." }, (async (message, match) => {
+
+	match = !message.reply_message.txt ? match : message.reply_message.text;
+
+	if (match === '' || (!match.includes('/stories/') && match.startsWith('http'))) return await message.sendMessage('```Give me a username.```');
+
+	if (match.includes('/stories/')) {
+
+		let s = match.indexOf('/stories/') + 9;
+
+		let e = match.lastIndexOf('/');
+
+		match = match.substring(s, e);
+
+	}
+
+	let json = await igStory(match);
+
+	if (json.error) return await message.sendMessage(json.error);
+
+	if (json.medias.length > 0) {
+
+		await message.sendMessage('```Downloading``` *' + json.medias.length + '* ```stories...```');
+
+		for (let media of json.medias) {
+
+			let { buffer, type } = await getBuffer(media.url);
+
+			if (type == 'video') await message.sendMessage(buffer, { mimetype: Mimetype.mp4 }, MessageType.video);
+
+			else if (type == 'image') await message.sendMessage(buffer, { mimetype: Mimetype.jpeg }, MessageType.image);
+
+		}
+
+	}
+
+}));
+
+async function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
+ 
+
