@@ -1,8 +1,3 @@
-/*
-# Copyright (C) 2020 farhan-dqz
-*/
-
-
 const Asena = require('../Utilis/events');
 
 const { MessageType, Mimetype } = require('@adiwajshing/baileys');
